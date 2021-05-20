@@ -1,8 +1,8 @@
-# Quick File Create
+# Open Storybook Story
 
 ## Features
 
-Automatically create a file named after a newly created folder
+Quickly open storybook stories in the browser from the editor
 
 ## Examaple
 
