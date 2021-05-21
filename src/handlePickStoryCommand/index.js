@@ -39,6 +39,7 @@ module.exports = function handleKeyboardTrigger(context) {
 
           quickPick.onDidHide(() => quickPick.dispose())
 
+          quickPick.placeholder = 'Select story to open'
           quickPick.show()
         } catch (error) {
           console.log(error)
