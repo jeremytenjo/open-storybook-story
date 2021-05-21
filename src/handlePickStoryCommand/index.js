@@ -14,7 +14,8 @@ module.exports = function handleKeyboardTrigger(context) {
         try {
           const storiesList = await vscode.workspace.findFiles(
             userConfig.storyFilesLocationGlob,
-            '**​/node_modules/**'
+            '**​/node_modules/**',
+            5000
           )
 
           if (!storiesList.length) {
