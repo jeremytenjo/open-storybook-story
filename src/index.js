@@ -1,12 +1,12 @@
-const handleKeyboardTrigger = require('./handleKeyboardTrigger')
+const handlePickStoryCommand = require('./handlePickStoryCommand')
 const pkgJson = require('../package.json')
 
 /**
  * @param {vscode.ExtensionContext} context
  */
-function activate() {
+function activate(context) {
   console.log(`${pkgJson.name} activated!`)
-  handleKeyboardTrigger()
+  handlePickStoryCommand(context)
 }
 
 // this method is called when your extension is deactivated

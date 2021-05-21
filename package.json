@@ -3,7 +3,7 @@
 	"displayName": "Open Storybook Story",
 	"description": "Quickly open storybook stories in the browser from the editot",
 	"publisher": "tenjojeremy",
-	"version": "0.16.0",
+	"version": "0.1.0",
 	"engines": {
 		"vscode": "^1.55.0"
 	},
@@ -11,7 +11,7 @@
 		"Other"
 	],
 	"activationEvents": [
-		"onStartupFinished"
+		"onCommand:openStorybookStory.pickStory"
 	],
 	"main": "./src/index.js",
 	"scripts": {
@@ -32,23 +32,27 @@
 			"properties": {
 				"openStorybookStory.localhostPort": {
 					"type": "number",
-					"default": 6006,
+					"default": 9002,
 					"description": "Localhost storybook port number"
 				},
-				"openStorybookStory.liveSitePathname": {
+				"openStorybookStory.storyFilesLocationGlob": {
 					"type": "string",
-					"default": "",
-					"description": "Pathname to production storybook"
-				},
-				"openStorybookStory.storyFilesLocationGlobs": {
-					"type": "array",
-					"default": [
-						"src/**/*stories.@(js|jsx|ts|tsx|mdx)"
-					],
+					"default": "src/**/*stories.{js,jsx,mdx,ts,tsx}",
 					"description": "Array of globs that indicates the location of your story files"
+				},
+				"openStorybookStory.rootPath": {
+					"type": "string",
+					"default": "lib",
+					"description": "Root path of project"
 				}
 			}
-		}
+		},
+		"commands": [
+			{
+				"command": "openStorybookStory.pickStory",
+				"title": "Open Storybook Story: Pick story"
+			}
+		]
 	},
 	"devDependencies": {
 		"@types/vscode": "^1.55.0",
