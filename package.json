@@ -30,7 +30,7 @@
 		"configuration": {
 			"title": "Open Storybook Story",
 			"properties": {
-				"openStorybookStory.localhostPort": {
+				"openStorybookStory.storybookPort": {
 					"type": "number",
 					"default": 9002,
 					"description": "Localhost storybook port number"

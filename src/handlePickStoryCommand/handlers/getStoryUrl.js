@@ -19,7 +19,7 @@ module.exports = function getStoryUrl(fileUri) {
   storyPath = storyPath.join('-')
 
   const storyUrl = {
-    url: `http://localhost:${userConfig.localhostPort}/?path=/source/${storyPath}`,
+    url: `http://localhost:${userConfig.storybookPort}/?path=/source/${storyPath}`,
     label: storyPath
   }
 
